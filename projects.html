@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects • Nitesh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Nitesh</a>
+            <div class="nav-links">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <h1 class="page-title">All Projects</h1>
+            <p class="page-subtitle">Things I've built, broken, and rebuilt. A mix of AI, web platforms, and embedded systems.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Projects -->
+    <section class="projects-detailed">
+        <div class="container">
+            
+            <!-- Project 1 -->
+            <article class="project-detail">
+                <div class="project-detail-header">
+                    <div>
+                        <h2>AI-Based Fault Detection in Power Systems</h2>
+                        <p class="project-meta">2024 • Machine Learning, Signal Processing</p>
+                    </div>
+                    <div class="project-links-group">
+                        <a href="#" class="btn-link">View Code</a>
+                        <a href="#" class="btn-link">Live Demo</a>
+                    </div>
+                </div>
+                
+                <div class="project-detail-content">
+                    <div class="project-main">
+                        <h3>The Problem</h3>
+                        <p>Power transmission systems fail. When they do, it costs money and causes blackouts. Most systems rely on manual detection or simple threshold-based alerts, which miss subtle faults and create false positives.</p>
+
+                        <h3>What I Built</h3>
+                        <p>An AI system that detects and classifies faults in medium-voltage transmission lines before they escalate. Used MATLAB and Simulink to model transmission line behavior under different fault conditions (line-to-ground, line-to-line, three-phase).</p>
+                        
+                        <p>Trained Random Forest and SVM classifiers on extracted features from voltage and current waveforms. The models learned to distinguish between fault types with high accuracy.</p>
+
+                        <p>Built a Streamlit dashboard that visualizes real-time 3-phase waveforms and displays fault predictions. Engineers can see what's happening as it happens.</p>
+
+                        <h3>Technical Stack</h3>
+                        <ul class="tech-list">
+                            <li><strong>Simulation:</strong> MATLAB, Simulink for power system modeling</li>
+                            <li><strong>ML Pipeline:</strong> Python, Scikit-learn for model training and evaluation</li>
+                            <li><strong>Models:</strong> Random Forest, Support Vector Machines (SVM)</li>
+                            <li><strong>Frontend:</strong> Streamlit for interactive dashboard</li>
+                            <li><strong>Data Processing:</strong> NumPy, Pandas for feature extraction</li>
+                        </ul>
+
+                        <h3>Results</h3>
+                        <p>The system achieved over 95% classification accuracy on test data. Response time improved significantly compared to manual detection methods. The dashboard makes it accessible to operators without ML expertise.</p>
+                    </div>
+
+                    <div class="project-sidebar">
+                        <div class="sidebar-section">
+                            <h4>Role</h4>
+                            <p>Solo project – system design, ML pipeline, dashboard</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Duration</h4>
+                            <p>3 months</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>MATLAB</span>
+                                <span>Scikit-learn</span>
+                                <span>Streamlit</span>
+                                <span>Simulink</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-detail">
+                <div class="project-detail-header">
+                    <div>
+                        <h2>NSUTrade Campus Marketplace</h2>
+                        <p class="project-meta">2024 • Full-Stack Web Development</p>
+                    </div>
+                    <div class="project-links-group">
+                        <a href="#" class="btn-link">View Code</a>
+                        <a href="#" class="btn-link">Live Site</a>
+                    </div>
+                </div>
+                
+                <div class="project-detail-content">
+                    <div class="project-main">
+                        <h3>The Problem</h3>
+                        <p>Students at NSUT needed a way to buy and sell textbooks, notes, and electronics without relying on external platforms or campus bulletin boards. Existing solutions were clunky, untrusted, or not designed for campus use.</p>
+
+                        <h3>What I Built</h3>
+                        <p>A full-stack marketplace built with the MERN stack. Students can list items, browse by category, message sellers, and reserve products. Authentication is secure (JWT-based), and the UI is responsive across devices.</p>
+                        
+                        <p>Implemented Redux Toolkit for state management to keep the frontend predictable and scalable. Real-time listing updates ensure students see current availability.</p>
+
+                        <p>Built an admin dashboard for moderation. Admins can review flagged listings, manage users, and view analytics on platform activity.</p>
+
+                        <h3>Technical Stack</h3>
+                        <ul class="tech-list">
+                            <li><strong>Frontend:</strong> React, Redux Toolkit, Tailwind CSS</li>
+                            <li><strong>Backend:</strong> Node.js, Express.js</li>
+                            <li><strong>Database:</strong> MongoDB with Mongoose ODM</li>
+                            <li><strong>Auth:</strong> JWT-based authentication</li>
+                            <li><strong>Deployment:</strong> Vercel (frontend), hosted API</li>
+                        </ul>
+
+                        <h3>Challenges</h3>
+                        <p>Managing concurrent reservations was tricky. Implemented optimistic locking to prevent double-booking. Tailwind made styling fast but required discipline to keep the design system consistent.</p>
+
+                        <h3>Results</h3>
+                        <p>Live platform serving NSUT students. Clean UI, fast load times, functional admin tools. Learned a lot about full-stack architecture and user-focused design.</p>
+                    </div>
+
+                    <div class="project-sidebar">
+                        <div class="sidebar-section">
+                            <h4>Role</h4>
+                            <p>Full-stack developer</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Duration</h4>
+                            <p>4 months</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Express</span>
+                                <span>Redux</span>
+                                <span>Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-detail">
+                <div class="project-detail-header">
+                    <div>
+                        <h2>Aarti Music Player</h2>
+                        <p class="project-meta">2024 • Embedded Systems, Hardware</p>
+                    </div>
+                    <div class="project-links-group">
+                        <a href="#" class="btn-link">View Code</a>
+                    </div>
+                </div>
+                
+                <div class="project-detail-content">
+                    <div class="project-main">
+                        <h3>The Problem</h3>
+                        <p>Needed a device that could automatically play devotional music (aarti) at scheduled times daily. Available solutions were either too expensive or lacked flexibility for custom scheduling.</p>
+
+                        <h3>What I Built</h3>
+                        <p>An Arduino-based music player with RTC (real-time clock) synchronization. The device plays pre-stored tracks at fixed times without manual intervention.</p>
+                        
+                        <p>Added Bluetooth control using the HC-06 module so users can adjust schedules, skip tracks, or change volume remotely via a mobile terminal app.</p>
+
+                        <p>Designed the PCB layout in KiCad for a cleaner, more compact build. The system is low-power, reliable, and easy to replicate.</p>
+
+                        <h3>Technical Stack</h3>
+                        <ul class="tech-list">
+                            <li><strong>Hardware:</strong> Arduino, RTC module, HC-06 Bluetooth, audio module</li>
+                            <li><strong>Software:</strong> Embedded C for Arduino</li>
+                            <li><strong>Design:</strong> MATLAB for initial modeling, KiCad for PCB layout</li>
+                        </ul>
+
+                        <h3>Use Cases</h3>
+                        <p>While built for home use, the design works for school bell systems, automated announcements, or any scheduled audio playback scenario in low-power environments.</p>
+                    </div>
+
+                    <div class="project-sidebar">
+                        <div class="sidebar-section">
+                            <h4>Role</h4>
+                            <p>Hardware design, firmware, PCB layout</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Duration</h4>
+                            <p>2 months</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span>Arduino</span>
+                                <span>Embedded C</span>
+                                <span>KiCad</span>
+                                <span>MATLAB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-detail">
+                <div class="project-detail-header">
+                    <div>
+                        <h2>AI Chatbot</h2>
+                        <p class="project-meta">2023 • Natural Language Processing, API Integration</p>
+                    </div>
+                    <div class="project-links-group">
+                        <a href="#" class="btn-link">View Code</a>
+                    </div>
+                </div>
+                
+                <div class="project-detail-content">
+                    <div class="project-main">
+                        <h3>What I Built</h3>
+                        <p>A conversational AI chatbot using OpenAI's GPT API. The interface is built with Streamlit to keep things simple and accessible.</p>
+
+                        <p>Focused on clean API integration, error handling, and a responsive UI. Users can have natural conversations, and the chatbot maintains context across turns.</p>
+
+                        <h3>Technical Stack</h3>
+                        <ul class="tech-list">
+                            <li><strong>Backend:</strong> Python, OpenAI API</li>
+                            <li><strong>Frontend:</strong> Streamlit</li>
+                            <li><strong>Version Control:</strong> Git, GitHub for collaborative development</li>
+                        </ul>
+
+                        <h3>What I Learned</h3>
+                        <p>How to integrate third-party APIs effectively, handle rate limits, and build user-friendly interfaces for ML applications. This was my first project shipping a live ML app to end users.</p>
+                    </div>
+
+                    <div class="project-sidebar">
+                        <div class="sidebar-section">
+                            <h4>Role</h4>
+                            <p>Solo developer</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Duration</h4>
+                            <p>1 month</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>OpenAI API</span>
+                                <span>Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Nitesh. <a href="index.html" style="color: var(--text-secondary); text-decoration: underline;">Back to home</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
