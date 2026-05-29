@@ -1,256 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitesh • Developer & Builder</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nitesh — Developer & Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-content">
-            <a href="#home" class="nav-logo">Nitesh</a>
-            <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+
+<!-- Noise overlay -->
+<div class="noise"></div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home">N.</a>
+    <div class="nav-links">
+      <a href="#work" data-text="Work">Work</a>
+      <a href="#about" data-text="About">About</a>
+      <a href="#contact" data-text="Contact">Contact</a>
+      <a href="projects.html" class="nav-cta">All Projects ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work" class="mm-link">Work</a>
+  <a href="#about" class="mm-link">About</a>
+  <a href="#contact" class="mm-link">Contact</a>
+  <a href="projects.html" class="mm-link">All Projects</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-text">BUILDER</div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-label">
+        <span class="status-dot"></span>
+        Delhi, India &nbsp;·&nbsp; Open to Opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="line" data-delay="0">I make things.</span>
+        <span class="line italic" data-delay="120">Sometimes they work,</span>
+        <span class="line" data-delay="240">sometimes they don't.</span>
+        <span class="line accent-line" data-delay="360">I keep going anyway.</span>
+      </h1>
+      <p class="hero-sub">
+        ECE student at NSUT building AI systems, full-stack platforms, and hardware that solves real problems. Looking to work with people who care about what they ship.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn-primary">See my work</a>
+        <a href="#contact" class="btn-ghost">Let's talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="work" id="work">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">01 — Selected Work</span>
+      <h2 class="section-title">Things I've Built</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <article class="project-card" data-color="#0a1628">
+        <div class="card-inner">
+          <div class="card-top">
+            <div class="card-tags">
+              <span>AI / ML</span>
+              <span>Python</span>
             </div>
+            <span class="card-year">2024</span>
+          </div>
+          <h3 class="card-title">AI Fault Detection<br>in Power Systems</h3>
+          <p class="card-desc">
+            Trained Random Forest and SVM models to detect and classify faults in medium-voltage transmission lines. Real-time waveform visualization through a Streamlit dashboard. Built in MATLAB and Simulink, deployed for engineers to actually use.
+          </p>
+          <div class="card-stack">
+            <span>Python</span><span>MATLAB</span><span>Scikit-learn</span><span>Streamlit</span><span>Simulink</span>
+          </div>
+          <a href="projects.html#fault" class="card-link">
+            View project
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
         </div>
-    </nav>
+        <div class="card-number">01</div>
+      </article>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">I build things.</h1>
-                <p class="hero-text">
-                    Sometimes they work, sometimes they don't. I keep going anyway, hoping it adds up to something. Currently studying Electronics & Communication at NSUT, building AI systems and web platforms that solve real problems.
-                </p>
-                <div class="hero-meta">
-                    <span>Delhi, India</span>
-                    <span class="dot"></span>
-                    <span>Open to opportunities</span>
-                </div>
+      <!-- Project 2 -->
+      <article class="project-card featured" data-color="#0d1f0a">
+        <div class="card-inner">
+          <div class="card-top">
+            <div class="card-tags">
+              <span>Full Stack</span>
+              <span>MERN</span>
             </div>
+            <span class="card-year">2024</span>
+          </div>
+          <h3 class="card-title">NSUTrade</h3>
+          <p class="card-desc">
+            Campus marketplace for NSUT students. Buy, sell, and reserve textbooks, notes, and electronics. Full MERN stack with Redux Toolkit, JWT auth, real-time updates. Admin dashboard for moderation and analytics. Deployed on Vercel.
+          </p>
+          <div class="card-stack">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span><span>Redux</span><span>Tailwind</span>
+          </div>
+          <a href="projects.html#nsutrade" class="card-link">
+            View project
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
         </div>
-    </section>
+        <div class="card-number">02</div>
+      </article>
 
-    <!-- Projects Section -->
-    <section class="projects" id="work">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            
-            <div class="project-list">
-                <!-- Project 1 -->
-                <article class="project">
-                    <div class="project-header">
-                        <h3 class="project-name">AI Fault Detection System</h3>
-                        <span class="project-year">2024</span>
-                    </div>
-                    <p class="project-description">
-                        Built an AI system that detects and classifies faults in power transmission lines. Trained Random Forest and SVM models to predict failures before they happen, then wrapped it in a Streamlit dashboard so engineers can actually use it. Real-time waveform visualization, fault classification, the whole thing.
-                    </p>
-                    <div class="project-stack">
-                        <span>Python</span>
-                        <span>MATLAB</span>
-                        <span>Scikit-learn</span>
-                        <span>Streamlit</span>
-                        <span>Simulink</span>
-                    </div>
-                    <a href="#" class="project-link" aria-label="View AI Fault Detection project">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project">
-                    <div class="project-header">
-                        <h3 class="project-name">NSUTrade</h3>
-                        <span class="project-year">2024</span>
-                    </div>
-                    <p class="project-description">
-                        Campus marketplace for NSUT students. Buy and sell books, notes, electronics. Full MERN stack with Redux for state management, secure auth, real-time updates. Added an admin dashboard because someone needs to keep things civil. Deployed on Vercel.
-                    </p>
-                    <div class="project-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Express</span>
-                        <span>Redux</span>
-                        <span>Tailwind</span>
-                    </div>
-                    <a href="#" class="project-link" aria-label="View NSUTrade project">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project">
-                    <div class="project-header">
-                        <h3 class="project-name">Aarti Music Player</h3>
-                        <span class="project-year">2024</span>
-                    </div>
-                    <p class="project-description">
-                        Automatic devotional music player that plays scheduled tracks at fixed times using RTC synchronization. Built with Arduino and HC-06 for Bluetooth control. Started as a project for home, ended up being useful for school bell systems and automated announcements.
-                    </p>
-                    <div class="project-stack">
-                        <span>Arduino</span>
-                        <span>MATLAB</span>
-                        <span>KiCad</span>
-                        <span>Embedded C</span>
-                    </div>
-                    <a href="#" class="project-link" aria-label="View Aarti Music Player project">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </article>
-
-                <!-- Project 4 -->
-                <article class="project">
-                    <div class="project-header">
-                        <h3 class="project-name">AI Chatbot</h3>
-                        <span class="project-year">2023</span>
-                    </div>
-                    <p class="project-description">
-                        Conversational AI chatbot using OpenAI's API. Clean Streamlit interface, version controlled on GitHub. Learned how to integrate external APIs and ship lightweight ML applications that people can actually talk to.
-                    </p>
-                    <div class="project-stack">
-                        <span>Python</span>
-                        <span>OpenAI API</span>
-                        <span>Streamlit</span>
-                        <span>Git</span>
-                    </div>
-                    <a href="#" class="project-link" aria-label="View AI Chatbot project">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </article>
+      <!-- Project 3 -->
+      <article class="project-card" data-color="#1a0a0a">
+        <div class="card-inner">
+          <div class="card-top">
+            <div class="card-tags">
+              <span>Hardware</span>
+              <span>Embedded</span>
             </div>
+            <span class="card-year">2024</span>
+          </div>
+          <h3 class="card-title">Aarti Music<br>Player</h3>
+          <p class="card-desc">
+            Arduino-based automatic devotional music player with RTC synchronization. Plays scheduled tracks at fixed daily times. Bluetooth-controlled via HC-06 from a mobile terminal. PCB designed in KiCad. Useful beyond the original purpose — school bell systems, timed announcements.
+          </p>
+          <div class="card-stack">
+            <span>Arduino</span><span>KiCad</span><span>MATLAB</span><span>Embedded C</span>
+          </div>
+          <a href="projects.html#aarti" class="card-link">
+            View project
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
         </div>
-    </section>
+        <div class="card-number">03</div>
+      </article>
 
-    <!-- Skills & Experience -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">Background</h2>
-            
-            <div class="about-grid">
-                <div class="about-column">
-                    <h3 class="about-heading">What I Do</h3>
-                    <p class="about-text">
-                        I'm studying Electronics & Communication Engineering at NSUT, but I spend most of my time writing code. Full-stack web development, machine learning models, embedded systems. Whatever the problem needs.
-                    </p>
-                    <p class="about-text">
-                        I like building things that work. Whether it's training neural networks to predict power failures or designing a campus marketplace from scratch, I'm in it to see ideas turn into something real.
-                    </p>
-                    <p class="about-text">
-                        I want to work with people who care about what they build. People who iterate, who aren't afraid to start over, who believe the details matter.
-                    </p>
-                </div>
-
-                <div class="about-column">
-                    <h3 class="about-heading">Skills</h3>
-                    <div class="skills-compact">
-                        <div class="skill-group">
-                            <h4>Languages</h4>
-                            <p>Python, JavaScript, Java, Bash</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Web</h4>
-                            <p>React, Node.js, Express, MongoDB, Tailwind, Angular</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>ML & Data</h4>
-                            <p>TensorFlow, Scikit-learn, NumPy, Pandas, Matplotlib</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Tools</h4>
-                            <p>Git, Docker, Kubernetes, GCP, MATLAB, KiCad</p>
-                        </div>
-                    </div>
-
-                    <h3 class="about-heading" style="margin-top: 2rem;">Experience</h3>
-                    <div class="experience-compact">
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <span class="exp-title">Community Intern</span>
-                                <span class="exp-period">Jan – Aug 2024</span>
-                            </div>
-                            <p class="exp-org">NSS NSUT Cell</p>
-                            <p class="exp-desc">200+ hours of community service. Worked on GPAI documentation and coordinated the Red Fort Independence Day event.</p>
-                        </div>
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <span class="exp-title">PR & Sponsorship Coordinator</span>
-                                <span class="exp-period">Jan – May 2024</span>
-                            </div>
-                            <p class="exp-org">Moksha-Innovision 2024</p>
-                            <p class="exp-desc">Managed company relations and cold outreach. Learned how to talk to people who can say no.</p>
-                        </div>
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <span class="exp-title">Executive Committee</span>
-                                <span class="exp-period">Sep 2023 – Present</span>
-                            </div>
-                            <p class="exp-org">Nakshatra (Astronomy & Math Society)</p>
-                            <p class="exp-desc">Organized campus events and outreach programs. Event planning meets logistics.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Project 4 -->
+      <article class="project-card" data-color="#0a0a1a">
+        <div class="card-inner">
+          <div class="card-top">
+            <div class="card-tags">
+              <span>AI</span>
+              <span>NLP</span>
             </div>
+            <span class="card-year">2023</span>
+          </div>
+          <h3 class="card-title">AI Chatbot</h3>
+          <p class="card-desc">
+            Conversational AI using OpenAI's API. Streamlit interface, context-aware conversations, clean error handling. First project where I shipped a live ML app to real users. Learned how APIs, rate limits, and UX intersect.
+          </p>
+          <div class="card-stack">
+            <span>Python</span><span>OpenAI API</span><span>Streamlit</span><span>Git</span>
+          </div>
+          <a href="projects.html#chatbot" class="card-link">
+            View project
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
         </div>
-    </section>
+        <div class="card-number">04</div>
+      </article>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            
-            <div class="contact-content">
-                <p class="contact-intro">
-                    I'm always interested in hearing about new projects, opportunities, or just talking about tech. If you're building something interesting or think I'd be a good fit for your team, let's talk.
-                </p>
+    </div>
 
-                <div class="contact-methods">
-                    <div class="contact-group">
-                        <h3>Email</h3>
-                        <a href="mailto:realofficialnitesh@gmail.com" class="contact-link">realofficialnitesh@gmail.com</a>
-                    </div>
-                    
-                    <div class="contact-group">
-                        <h3>Phone</h3>
-                        <a href="tel:+918178114219" class="contact-link">+91 8178114219</a>
-                    </div>
+    <div class="work-cta">
+      <a href="projects.html" class="btn-outline">See all projects →</a>
+    </div>
+  </div>
+</section>
 
-                    <div class="contact-group">
-                        <h3>Links</h3>
-                        <div class="contact-links">
-                            <a href="https://github.com/officialnitesh" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-                            <a href="https://linkedin.com/in/real-nitesh" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-left">
+        <span class="section-tag">02 — About</span>
+        <h2 class="section-title">Background</h2>
+        <div class="about-photo-block">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="42" r="22" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              <path d="M24 102C24 80 40 66 60 66C80 66 96 80 96 102" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+            <p>Add your photo here</p>
+          </div>
+          <div class="photo-stats">
+            <div class="stat-pill">
+              <span class="stat-n">200+</span>
+              <span>community hours</span>
             </div>
+            <div class="stat-pill">
+              <span class="stat-n">4</span>
+              <span>shipped projects</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-n">2027</span>
+              <span>graduation</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 Nitesh. Built from scratch.</p>
+      <div class="about-right">
+        <div class="about-text">
+          <p class="about-lead">
+            I'm studying Electronics & Communication at NSUT but I spend most of my time writing code.
+          </p>
+          <p>
+            AI systems, full-stack web platforms, embedded hardware. Whatever the problem needs. I like building things that actually work, not just things that look good in a README.
+          </p>
+          <p>
+            I want to work with people who care about what they build. Who iterate, who aren't afraid to start over, who think the details matter.
+          </p>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="skills-block">
+          <h3>What I work with</h3>
+          <div class="skills-cols">
+            <div class="skill-col">
+              <h4>Languages</h4>
+              <p>Python, JavaScript, Java, Bash</p>
+            </div>
+            <div class="skill-col">
+              <h4>Web</h4>
+              <p>React, Node.js, Express, MongoDB, Tailwind, Angular</p>
+            </div>
+            <div class="skill-col">
+              <h4>ML & Data</h4>
+              <p>TensorFlow, Scikit-learn, NumPy, Pandas, Matplotlib</p>
+            </div>
+            <div class="skill-col">
+              <h4>Tools</h4>
+              <p>Git, Docker, Kubernetes, GCP, MATLAB, KiCad</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-block">
+          <h3>Experience</h3>
+          <div class="exp-list">
+            <div class="exp-row">
+              <div>
+                <p class="exp-title">Community Intern — NSS NSUT Cell</p>
+                <p class="exp-detail">200+ hours of service. GPAI documentation. Red Fort Independence Day event coordination.</p>
+              </div>
+              <span class="exp-date">2024</span>
+            </div>
+            <div class="exp-row">
+              <div>
+                <p class="exp-title">PR & Sponsorship — Moksha-Innovision 2024</p>
+                <p class="exp-detail">Managed company relations. Cold outreach. Learned to talk to people who can say no.</p>
+              </div>
+              <span class="exp-date">2024</span>
+            </div>
+            <div class="exp-row">
+              <div>
+                <p class="exp-title">Executive Committee — Nakshatra Society</p>
+                <p class="exp-detail">Astronomy and Math Society. Organized C2C outreach, Moksha-Innovision'24, Resonanz'24.</p>
+              </div>
+              <span class="exp-date">2023–</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs-block">
+          <h3>Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item">Design Thinking <span>IIT Madras</span></div>
+            <div class="cert-item">Science of Happiness <span>IIT Kharagpur</span></div>
+            <div class="cert-item">Remote Sensing & GIS <span>ISRO</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <span class="section-tag">03 — Contact</span>
+        <h2 class="contact-heading">
+          Let's build<br>
+          <em>something</em><br>
+          together.
+        </h2>
+        <p class="contact-sub">
+          I'm always interested in new projects and opportunities. If you're working on something interesting or think I'd be a good fit, reach out.
+        </p>
+      </div>
+      <div class="contact-right">
+        <div class="contact-links">
+          <a href="mailto:realofficialnitesh@gmail.com" class="contact-item">
+            <span class="ci-label">Email</span>
+            <span class="ci-value">realofficialnitesh@gmail.com</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H8M16 4V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="tel:+918178114219" class="contact-item">
+            <span class="ci-label">Phone</span>
+            <span class="ci-value">+91 8178114219</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H8M16 4V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://github.com/officialnitesh" target="_blank" rel="noopener" class="contact-item">
+            <span class="ci-label">GitHub</span>
+            <span class="ci-value">officialnitesh</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H8M16 4V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/real-nitesh" target="_blank" rel="noopener" class="contact-item">
+            <span class="ci-label">LinkedIn</span>
+            <span class="ci-value">real-nitesh</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H8M16 4V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Nitesh.</span>
+      <span class="footer-copy">Built from scratch © 2024</span>
+      <a href="#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
