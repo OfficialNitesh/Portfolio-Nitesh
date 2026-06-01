@@ -53,7 +53,7 @@ Personal website showcasing projects and technical growth.
 
 LinkedIn: https://www.linkedin.com/in/real-nitesh/
 
-Portfolio: realnitesh.in
+Portfolio: https://www.realnitesh.in
 
 Email: realofficialcreator@gmail.com
 
